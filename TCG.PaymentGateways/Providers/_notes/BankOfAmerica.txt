@@ -1,0 +1,44 @@
+﻿Live chat on website: Applied for developer account on 29-03-2014 using developer@thecodegroup.co.za
+
+https://firstdata.zendesk.com/home
+https://demo.globalgatewaye4.firstdata.com/?lang=en
+contact: patrick.bowanko@bankofamericamerchant.com
+
+Test Merchant Name: 	The Code Group
+Test User Name: 		the386
+Test User Password: 	devmo28141
+
+
+Notes:
+Your demo account will allow you access to almost all of the functionality on the live system, and can be used to develop solutions that work with Global Gateway e4. Note that only the USD currency is available by default for demo accounts.
+
+Demo URLs
+
+RPM Interface - https://demo.globalgatewaye4.firstdata.com/
+
+API Endpoint - https://api.demo.globalgatewaye4.firstdata.com/transaction or 50.112.167.93 
+API WSDL - https://api.demo.globalgatewaye4.firstdata.com/transaction/wsdl
+
+Payment Page Checkout URL - https://demo.globalgatewaye4.firstdata.com/payment
+
+Test Card Numbers
+
+Test card numbers can be found here.
+
+Testing CVV & AVS
+
+To Test CVV functionality:   https://firstdata.zendesk.com/entries/407655-how-to-test-cvd-cvv-cvv2-functionality
+
+To Test AVS Responses:  https://firstdata.zendesk.com/entries/23872458-How-to-test-AVS-Response-Codes-in-Demo
+
+How to generate unsuccessful transactions:  https://firstdata.zendesk.com/entries/407657-how-to-generate-unsuccessful-transactions-during-testing
+
+Unsupported Transaction Types
+
+These transaction types used for ValueLink transactions are currently not supported in the demo environment.
+
+Cash out
+Valuelink Activation
+Balance Inquiry
+Reload
+Valuelink Deactivation

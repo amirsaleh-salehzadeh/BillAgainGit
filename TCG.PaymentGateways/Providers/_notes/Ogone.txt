@@ -1,0 +1,20 @@
+﻿
+https://secure.ogone.com/ncol/test/backoffice/container/index?branding=OGONE
+
+login name (PSPID)		thecodegrouptest
+E-mail					developer@thecodegroup.co.za
+
+Your password:			devmo.2814
+
+
+
+TRANSACTION RESULT
+BASED ON AMOUNT
+			Amount			Amount X 100		BASED ON CARD NUMBER
+Successful	0 - 9000		0 - 900000			Any other card number
+Refused		> 9000			> 900000			4111113333333333
+Uncertain	9999			999900				4111116666666666
+
+Test-card numbers
+    VISA				4111 1111 1111 1111
+    Visa 3-D Secure		4000 0000 0000 0002 

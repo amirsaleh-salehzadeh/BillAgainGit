@@ -1,0 +1,43 @@
+﻿http://www.cybersource.com/
+
+Organization ID: 00000000_acct
+Contact Email: developer@thecodegroup.co.za
+
+Organization ID: 00000000
+Contact Email: developer@thecodegroup.co.za  
+
+
+username: thecodegrouptest
+password: devmo.2814
+
+
+Security Questions:
+1. How old were you when you first travelled by airplane and where did you go:
+	- 123
+	- 456
+2. If you could have dinner with anyone, real or fictional, who would it be and what would you serve them?
+	- 1234
+	- 4567
+3. If you could play any sport professionally, what sport would it be and what position would you play?
+	- 12345
+	- 45678
+4. Who was your favorite teacher in school and what subject did they teach?
+	- 123456
+	- 456789
+5. Who is your favorite author and what is your favorite book of theirs?
+	- 1234567
+	- 4567890
+
+
+
+	Security Keys for the Simple Order API
+
+	Security Keys for the SOAP Toolkit API
+	8O3U3abx3Kgz/DG5ie7i8Nq2bZP9GpnAvy6U0ZGbbXh5ReRSgV6IN39ANbb+aUJKeMLHPmGQID+AvNLT3MUsWv/ixH8L1RpJz6g7xsa7ehxqhDRNsK4/o5vuGFBmKt+eMB8E8YwBZPJAAslEd/LUucuCZScjQszcFLcUAIk2rzf9pyz4hYnxOXaPMN55s+Y8UX3Yxgo0Op9v+HrHRcd7NEUsXX8iF/qTE+ln7zp/+YxxQAbPIXtgTptpJ0yJ0AzLLSMmfe4N2QSZ17wF5e9ma5BlC/MHse114Mqcswpx4RSipkj6XGM1UOnq0HVgk+SpRrpWwOCHqBEiWhXYdEHAoA==
+
+	Security Keys for the SCMP API
+
+
+
+
+

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:paygate.paybatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" targetNamespace="urn:paygate.paybatch" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:paygate.paybatch">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="BatchData">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="BatchLine" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InvalidData">
+        <xsd:sequence>
+          <xsd:element name="Line" type="xsd:int" />
+          <xsd:element name="Reason" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BatchReturn">
+        <xsd:sequence>
+          <xsd:element name="Total" type="xsd:int" />
+          <xsd:element name="Valid" type="xsd:int" />
+          <xsd:element name="Invalid" type="xsd:int" />
+          <xsd:element maxOccurs="unbounded" name="InvalidReason" type="tns:InvalidData" />
+          <xsd:element name="UploadID" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="QueryReturn">
+        <xsd:sequence>
+          <xsd:element name="Reference" type="xsd:string" />
+          <xsd:element name="DateUploaded" type="xsd:string" />
+          <xsd:element name="DateCompleted" type="xsd:string" />
+          <xsd:element name="Success" type="xsd:int" />
+          <xsd:element name="Fail" type="xsd:int" />
+          <xsd:element name="Unprocessed" type="xsd:int" />
+          <xsd:element maxOccurs="unbounded" name="TransResult" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="AuthRequest">
+    <part name="BatchReference" type="xsd:string" />
+    <part name="NotificationUrl" type="xsd:string" />
+    <part name="BatchData" type="tns:BatchData" />
+  </message>
+  <message name="AuthResponse">
+    <part name="Return" type="tns:BatchReturn" />
+  </message>
+  <message name="ConfirmRequest">
+    <part name="UploadID" type="xsd:string" />
+  </message>
+  <message name="ConfirmResponse">
+    <part name="Return" type="tns:BatchReturn" />
+  </message>
+  <message name="QueryRequest">
+    <part name="UploadID" type="xsd:string" />
+  </message>
+  <message name="QueryResponse">
+    <part name="Return" type="tns:QueryReturn" />
+  </message>
+  <portType name="PaybatchPortType">
+    <operation name="Auth">
+      <input message="tns:AuthRequest" />
+      <output message="tns:AuthResponse" />
+    </operation>
+    <operation name="Confirm">
+      <input message="tns:ConfirmRequest" />
+      <output message="tns:ConfirmResponse" />
+    </operation>
+    <operation name="Query">
+      <input message="tns:QueryRequest" />
+      <output message="tns:QueryResponse" />
+    </operation>
+  </portType>
+  <binding name="PaybatchBinding" type="tns:PaybatchPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="Auth">
+      <soap:operation soapAction="urn:paygate.paybatch#Auth" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:paygate.paybatch" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:paygate.paybatch" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="Confirm">
+      <soap:operation soapAction="urn:paygate.paybatch#Confirm" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:paygate.paybatch" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:paygate.paybatch" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="Query">
+      <soap:operation soapAction="urn:paygate.paybatch#Query" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:paygate.paybatch" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:paygate.paybatch" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="paybatch">
+    <port name="paybatchPort" binding="tns:PaybatchBinding">
+      <soap:address location="https://secure.paygate.co.za/paybatch/process.trans" />
+    </port>
+  </service>
+</definitions>

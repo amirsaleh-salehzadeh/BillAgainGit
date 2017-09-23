@@ -1,0 +1,14 @@
+﻿contacted via email for developer account on 02-04-2014 using developer@thecodegroup.co.za
+
+Registered Email: developer@thecodegroup.co.za
+Password: j1z4bkoqau
+
+docs:		http://itransact.com/downloads/PCFullDocument.pdf
+test url:	https://secure.test.itransact.com
+
+Use the following API credentials:
+Target Gateway: 31
+API Username: test_account_demo_U87RvHVr
+API Key: GSzks9za4EX6szXDCYUN
+
+You will have access to this development system until the 15th of April. Please contact us if you need that extended.

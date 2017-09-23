@@ -1,0 +1,7 @@
+﻿contacted via website for developer account on 02-04-2014 using developer@thecodegroup.co.za
+
+http://help.paytrace.com/api
+http://help.paytrace.com/formatting-and-sending-paytrace-api-requests
+
+Our sandbox login information is COD3GROUP for UN and PW = devmo.2814
+Validation image is laptop like pc

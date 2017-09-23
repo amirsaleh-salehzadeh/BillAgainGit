@@ -1,0 +1,9 @@
+﻿Vendor Name: thecodegroup
+
+Thank you for your interest in our products. To access Simulator, please follow the link below for details regarding the testing and configuration of the Simulator system:
+
+https://test.sagepay.com/Simulator 
+
+To log into your Simulator account please use the Vendor Name you specified on the registration form, and this password: OjXFcbgV
+
+Using Form in Simulator: your auto-generated encryption password is: 8R5HQKgneZDR2UhG

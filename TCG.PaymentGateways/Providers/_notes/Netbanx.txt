@@ -1,0 +1,19 @@
+﻿contacted via website for developer account on 02-04-2014 using developer@thecodegroup.co.za
+
+username: developer@thecodegroup.co.za
+password:	Devmo.2814
+
+https://developer.optimalpayments.com
+
+Hosted Payment API (REST)
+API Key 	dev-7405484414495931:B-tst1-2-eAcddLgs-UGOauzYIwUmR5q08tsd3e0kw0E5Fyam8JZbEY4XnFpJeMTUufVLJyd4Z8rJIq8hFP1KJzuPUmPrr8nJaT8eQ1rIJoBEBe04
+
+Web Services API
+FMA 	89986920
+Store ID 	test
+Store Password 	test
+
+Back Office Reporting Tool
+URL 	https://login.test.netbanx.com
+Username 	devcentre604
+Password 	Blue1234 

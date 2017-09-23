@@ -1,0 +1,132 @@
+﻿Applied for developer account on 29-03-2014 using developer@thecodegroup.co.za
+
+Email:			developer@thecodegroup.co.za
+Login:			thecodegrouptest
+password:		devmo.2814
+MerchantID:		ffsxw99q6z4bcg87
+Public Key:		xjrf3g4ndfrrn6q2
+Private Key:	74063683b81c1c3654ed1cf80ce0eafc
+CSE Key:		MIIBCgKCAQEA5J4gCqyzVxEgjhHUJjF7c7PMWTJBdy2m+x+u0cI0AUt1y6v9QswqxG0EbF5r98VwcA/+gjIn3m1hnPwOs78Tfu0dJumHBnD+ZOSfqr9Vkv8h2LKO/WYq4aK8zl98uZWu+wH/HiUaeL4SXcsKS7EoqvqckTOdUxR8Roa3quALbt/t/w/UT2dbD/MKYdILmfcoTb3Vjh2QLlF58oo1obL7OssYgAtAfE8NEO1rjxMw2TYsqcoBNo3fsSz0PvSoU7GddvaBglw6bfQuY+E0gFpzZiIJWyy57ESGmB5ISlnXRdOkpe20vqfatZ0FkEAbKg+jECPE18gFM1eGUo08y4l7gQIDAQAB
+
+----------------------------------------------------------------------------------------------------
+
+CAN"T USE NSOFTWARE
+BrainTree changed api - now uses merchant id and public key
+
+----------------------------------------------------------------------------------------------------
+Credit Card Numbers:
+
+The sandbox environment only accepts test credit card numbers. The following card numbers may be used.
+
+Visa:
+4111 1111 1111 1111
+4005 5192 0000 0004
+4009 3488 8888 1881
+4012 0000 3333 0026
+4012 0000 7777 7777
+4012 8888 8888 1881
+4217 6511 1111 1119
+4500 6000 0000 0061
+
+MasterCard:
+5555 5555 5555 4444
+
+American Express:
+3782 822463 10005
+3714 496353 98431
+
+Discover:
+6011 1111 1111 1117
+
+JCB:
+3530 1113 3330 0000
+
+Test Amounts for Unsuccessful Transactions:
+
+When working with transactions, you can pass specific amounts to simulate different responses from the gateway.
+
+Amounts between $0.01 - $1999.99 will simulate a successful authorization.
+Amounts between $2000.00 - $2062.99 and $3000.00 - $3000.99 will decline with the coordinating Processor Response.
+Amounts between $2063.00 - $2999.99 will simulate the generic decline message “Processor Declined” with a decline code equal to the amount.
+Amounts $3001.00 and greater will also simulate a successful authorization.
+
+Unsuccessful Verification:
+
+When working with the Credit Card or Customer API, use the following credit card numbers to simulate an unsuccessful card verification.
+
+Note: These numbers only simulate unsuccessful verifications due to processor declines when performing operations on Vault records, they will not simulate unsuccessful transactions. For unsuccessful transactions, use the test amounts in the section above.
+
+4000 1111 1111 1115 (Visa)
+5105 1051 0510 5100 (MasterCard)
+3787 344936 71000 (American Express)
+6011 0009 9013 9424 (Discover)
+Use the following credit card number to simulate a verification failure, status = failed (3000).
+
+3566 0020 2036 0505 (JCB)
+Note: Prior to version 2.5.0, we accepted a different Visa number (4222222222222). If you are using this number, please migrate to the number above.
+
+CVV Responses:
+The CVV response will be based on the CVV value.
+
+CVV Value	CVV Response Code
+200	N (does not match)
+201	U (not verified)
+301	S (issuer does not participate)
+blank	I (not provided)
+anything else	M (matches)
+
+AVS Responses:
+
+AVS responses are based on the value provided for street address and postal code.
+
+AVS Error Response Codes:
+
+Billing Postal Code	AVS Error Response Code
+30000	E (AVS system error)
+30001	S (issuing bank does not support AVS)
+anything else	blank
+
+AVS Postal Code Response Codes:
+
+Billing Postal Code	AVS Postal Code Response Code
+20000	N (does not match)
+20001	U (not verified)
+blank	I (not provided)
+anything else	M (matches)
+
+AVS Street Address Response Codes:
+
+Billing Street Address	AVS Street Address Response Code
+starts with 200	N (does not match)
+starts with 201	U (not verified)
+blank	I (not provided)
+anything else	M (matches)
+
+Webhook Testing:
+
+The client library can generate sample webhook notifications for testing. This functionality is not restricted to use in the sandbox environment, but may be helpful when building your integration. Plese see our webhook testing documentation for details.
+
+
+Card Type Information:
+
+The following card numbers can be used to simulate various types of cards.
+
+4500 6000 0000 0061 (prepaid)
+4009 0400 0000 0009 (commercial)
+4005 5192 0000 0004 (Durbin regulated)
+4012 0000 3333 0026 (healthcare)
+4012 0000 3333 0125 (debit)
+4012 0000 3333 0224 (payroll)
+4012 0000 3333 0323 (unknown)
+4012 0000 3333 0422 (all above values will be negative)
+
+Other Card Information:
+
+4012 0000 3333 0620 (country of issuance)
+4012 0000 3333 0521 (issuing bank)
+
+Fraud Information:
+
+The following card number can be used to trigger a fraud response in Sandbox.
+
+4000 1111 1111 1511 (transaction status: gateway_rejected and gateway rejection reason: fraud)

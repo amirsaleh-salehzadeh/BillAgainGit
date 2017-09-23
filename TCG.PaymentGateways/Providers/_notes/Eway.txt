@@ -1,0 +1,16 @@
+﻿contacted via website contact us for developer account on 02-04-2014 using developer@thecodegroup.co.za
+
+www.eway.com.au/eway-partner-portal/login
+
+Partner Portal login: developer@thecodegroup.co.za
+password: Devmo.2814
+
+
+SANDBOX:
+Login URL 	https://sandbox.myeway.com.au
+Username 	developer@thecodegroup.co.za.sand
+Customer Id 	91382135
+
+TEST CARDS:
+Visa 	4444333322221111
+MasterCard 	5105105105105100

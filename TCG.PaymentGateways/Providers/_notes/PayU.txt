@@ -1,0 +1,21 @@
+﻿
+*********Test store credentials*******************
+
+The following integration test stores can be used to integrate and test process flow.
+				PayU Enterprise API							SafeShop Enterprise API
+				----------------------------------------- --------------------------------------
+Store name:		Staging Enterprise Integration Store 1	 	SafeShop Enterprise Test Store
+SOAP Username:	Staging Enterprise Integration Store 1	 
+SOAP password:	j3w8swi5								 
+Safekey:		{E7A333D4-CC48-4463-BEC6-A4BC1F16DC30}	 	{62BBC6DB-73D3-4E82-85D1-224692E5D7B8}
+
+**********Test credit card credentials************
+
+Any transactions taking place using the test cards below, are being tested against PayU's internal simulator. 
+None of these transactions are live or real time. 
+Please ensure a minimum value of R1 is used for each transaction, or you will receive a failure transaction result.
+
+Name:			John Doe
+Number:			5470 4431 4831 2467
+Expiry Date:	01 / 2015
+CVV:			123

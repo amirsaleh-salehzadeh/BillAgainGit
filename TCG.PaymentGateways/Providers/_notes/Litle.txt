@@ -1,0 +1,6 @@
+﻿contacted via email for developer account on 02-04-2014 using developer@thecodegroup.co.za
+
+ sandbox doesn't require credentials and is capable of basic online operations
+
+ If you require more than the sandbox, we have another test environment called prelive that is running the same applications as our production environment. 
+ If you'd like access to prelive, please let me know and I will put you in touch with our implementations team.

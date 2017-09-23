@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43BD29BD-6169-4AB8-9CC0-8DB0C5CEABF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCG.PaymentGateways</RootNamespace>
+    <AssemblyName>TCG.PaymentGateways</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4114.6375, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Braintree, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31b586f34d3e96c7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Braintree.3.8.0\lib\net452\Braintree.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Moserware.SecretSplitter, Version=0.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Moserware.SecretSplitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nsoftware.InPayWeb, Version=6.0.5157.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\nsoftware.InPayWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TCG.Crypto, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\TCG.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="TCG.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\TCG.Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BatchOptions.cs" />
+    <Compile Include="Classes\Batch\BatchMethodEnum.cs" />
+    <Compile Include="Classes\Batch\BatchNotifications_Details.cs" />
+    <Compile Include="Classes\Batch\BatchNotification_Result.cs" />
+    <Content Include="Classes\Batch\BatchSale_Details.cs.txt" />
+    <Compile Include="Classes\Batch\Batch_InvalidActionDates_Validator.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_UploadReport_Details.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_UploadReport_Result.cs" />
+    <Compile Include="Classes\Batch\Batch_Verify_Build_Details.cs" />
+    <Compile Include="Classes\Batch\Batch_Verify_Build_Result.cs" />
+    <Compile Include="Classes\Batch\Batch_Verify_Details.cs" />
+    <Compile Include="Classes\Batch\Batch_Verify_Result.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_Build_Details.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_Build_Result.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_Recon_Details.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_Recon_Result.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_Release_Details.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_Release_Result.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_Submit_Details.cs" />
+    <Compile Include="Classes\Batch\Batch_Sale_Submit_Result.cs" />
+    <Compile Include="Classes\Batch\RevokePaymentMethod_Details.cs" />
+    <Compile Include="Classes\Batch\RevokePaymentMethod_Result.cs" />
+    <Compile Include="Classes\Batch\StorePaymentMethod_Details.cs" />
+    <Compile Include="Classes\Batch\StorePaymentMethod_Result.cs" />
+    <Compile Include="Classes\Batch\Transaction_Result_Batch.cs" />
+    <Compile Include="Classes\Extras\Lookups.cs" />
+    <Compile Include="Classes\Extras\DevInfo.cs" />
+    <Compile Include="Classes\Extras\ExternalUser.cs" />
+    <Compile Include="Classes\Extras\ThreePeaksUser.cs" />
+    <Compile Include="Classes\HPPOptions.cs" />
+    <Compile Include="Classes\HPP\HPP_Details.cs" />
+    <Compile Include="Classes\HPP\HPP_PostInfo.cs" />
+    <Compile Include="Classes\HPP\HPP_Result.cs" />
+    <Compile Include="Classes\HPP\HPP_VerifyDetails.cs" />
+    <Compile Include="Classes\CardTypeEnum.cs" />
+    <Compile Include="Classes\GatewayOptions.cs" />
+    <Compile Include="Classes\HPP\Transaction_Result_HPP.cs" />
+    <Compile Include="Classes\MerchantConfigValue.cs" />
+    <Compile Include="Classes\PaymentOptions.cs" />
+    <Compile Include="Classes\Payments\AuthCapture_Details.cs" />
+    <Compile Include="Classes\Payments\StorePaymentMethod_Details.cs" />
+    <Compile Include="Classes\Payments\StorePaymentMethod_Result.cs" />
+    <Compile Include="Classes\Payments\TestCard.cs" />
+    <Compile Include="Classes\Payments\Transaction_Result.cs" />
+    <Compile Include="Classes\Payments\Authenticate3dSecure_Details.cs" />
+    <Compile Include="Classes\Payments\Authenticate3dSecure_Result.cs" />
+    <Compile Include="Classes\Payments\Credit_Details.cs" />
+    <Compile Include="Classes\Payments\Lookup3dSecure_Details.cs" />
+    <Compile Include="Classes\Payments\Lookup3dSecure_Result.cs" />
+    <Compile Include="Classes\Payments\RevokePaymentMethod_Details.cs" />
+    <Compile Include="Classes\Payments\RevokePaymentMethod_Result.cs" />
+    <Compile Include="IGatewayStrategy.cs" />
+    <Compile Include="IHostedPPStrategy.cs" />
+    <Compile Include="ProvidersBatch\gwMyGateDD.cs" />
+    <Compile Include="ProvidersBatch\gwPayGateDD.cs" />
+    <Compile Include="ProvidersBatch\gwSagePayNetCashDD.cs" />
+    <Compile Include="ProvidersBatch\gwThreePeaksDD.cs" />
+    <Compile Include="ProvidersHPP\gwPayPalHPP.cs" />
+    <Compile Include="ProvidersHPP\gwTenpayHPP.cs" />
+    <Compile Include="ProvidersHPP\_deprecated\gwMonsterPayHPP.cs" />
+    <Compile Include="ProvidersHPP\gwPayFastHPP.cs" />
+    <Compile Include="ProvidersHPP\gwSagePayNetCashHPP.cs" />
+    <Compile Include="ProvidersHPP\gwAliPayHPP.cs" />
+    <Compile Include="Providers\_strip_dependencies\Charges\StripeChargeCreateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Charges\StripeChargeListOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Charges\StripeChargeService.cs" />
+    <Compile Include="Providers\_strip_dependencies\Charges\StripeChargeUpdateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Constants\StripeRefundReasons.cs" />
+    <Compile Include="Providers\_strip_dependencies\Constants\StripeSourceType.cs" />
+    <Compile Include="Providers\_strip_dependencies\Customers\StripeCustomerCreateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Customers\StripeCustomerListOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Customers\StripeCustomerService.cs" />
+    <Compile Include="Providers\_strip_dependencies\Customers\StripeCustomerUpdateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\CountrySpec.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\CustomerBankAccount.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Source.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeBancontact.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeBitcoin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeCodeVerification.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeIdeal.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeOwner.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeReceiver.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeRedirect.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeSepaDebit.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeSofort.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeSource.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeSourceCard.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Sources\StripeThreeDSecure.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\Stripe3DSecure.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeAccount.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeAccountVerification.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeAdditionalOwners.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeApplication.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeApplicationFee.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeApplicationFeeRefund.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeBalance.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeBalanceAmount.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeBalanceTransaction.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeBankAccount.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeBirthDay.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeCard.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeCharge.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeCoupon.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeCustomer.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeDeclineChargeOn.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeDeleted.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeDeliveryEstimate.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeDiscount.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeDispute.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeError.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeEvent.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeEventData.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeEventRequest.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeEvidence.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeEvidenceDetails.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeFee.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeFileUpload.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeInventory.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeInvoice.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeInvoiceLineItem.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeLegalEntity.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeLegalEntityVerification.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeList.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeLoginLink.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeManagedAccountKeys.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeOAuthDeauthorize.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeOAuthToken.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeOrder.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeOrderItem.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeOrderReturn.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeOutcome.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripePackageDimensions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripePayout.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripePeriod.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripePlan.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeProduct.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeRecipient.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeRecipientActiveAccount.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeRefund.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeReturn.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeReview.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeShipping.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeShippingMethod.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeSku.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeStatusTransitions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeSubscription.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeSubscriptionItem.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeTermsOfServiceAcceptance.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeToken.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeTransfer.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeTransferReversal.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\StripeTransferSchedule.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\_base\StripeEntity.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\_base\StripeEntityWithId.cs" />
+    <Compile Include="Providers\_strip_dependencies\Entities\_shared\StripeAddress.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Account\StripeAccountAdditionalOwner.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Client.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\EpochTime.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\JsonConverters\SourceConverter.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\JsonConverters\StripeDateTimeConverter.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\AdditionalOwnerPlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\ArrayPlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\DateFilterPlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\DictionaryPlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\IncludePlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\InvoiceSubscriptionItemPlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\IParserPlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\OrderItemsPlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\RequestStringBuilder.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\SubscriptionItemPlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Middleware\SubscriptionItemUpdatedPlugin.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\MimeTypes.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\ParameterBuilder.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Public\Mapper.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Public\StripeException.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Public\StripeResponse.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Requestor.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\StringOrObject.cs" />
+    <Compile Include="Providers\_strip_dependencies\Infrastructure\Urls.cs" />
+    <Compile Include="Providers\_strip_dependencies\Requestor.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Cards\StripeCardCreateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Cards\StripeCardService.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Cards\StripeCardUpdateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\INestedOption.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Invoices\StripeInvoiceSubscriptionItemOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Orders\StripeOrderItemOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Refunds\StripeRefundCreateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Refunds\StripeRefundListOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Refunds\StripeRefundService.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Refunds\StripeRefundUpdateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\SourceBankAccount.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\SourceCard.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Sources\StripeSourceCreateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Sources\StripeSourceOwner.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Sources\StripeSourceService.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Sources\StripeSourceUpdateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\StripeBasicService.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\StripeDateFilter.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\StripeListOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\StripeShippingOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Subscriptions\StripeSubscriptionItemOption.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Subscriptions\StripeSubscriptionItemUpdateOption.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Tokens\StripeTokenCreateOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\Tokens\StripeTokenService.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\_refactor\StripeCreditCardOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\Services\_sources_token\BankAccountOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\StripeConfiguration.cs" />
+    <Compile Include="Providers\_strip_dependencies\StripeRequestOptions.cs" />
+    <Compile Include="Providers\_strip_dependencies\StripeService.cs" />
+    <Compile Include="Providers\gwStripe.cs" />
+    <Compile Include="Providers\gwBrainTree.cs" />
+    <Compile Include="Providers\gwPayFastCC.cs" />
+    <Compile Include="Providers\gwPayPalCC.cs" />
+    <Compile Include="Providers\_deprecated\gwSetcom.cs" />
+    <Compile Include="Providers\_in_progress\gwCashFlows.cs" />
+    <Compile Include="Providers\gwVCS.cs" />
+    <Compile Include="ProviderTypeEnum.cs" />
+    <Compile Include="Classes\Payments\Refund_Details.cs" />
+    <Compile Include="Classes\Payments\Sale_Details.cs" />
+    <Compile Include="Classes\Payments\Void_Details.cs" />
+    <Compile Include="IBatchStrategy.cs" />
+    <Compile Include="IPaymentStrategy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\_in_progress\gwACHPayments.cs" />
+    <Compile Include="Providers\_in_progress\gwAdyen.cs" />
+    <Compile Include="Providers\_in_progress\gwAuthorizeNet.cs" />
+    <Compile Include="Providers\_in_progress\gwBarclay.cs" />
+    <Compile Include="Providers\_in_progress\gwBeanstream.cs" />
+    <Compile Include="Providers\_in_progress\gwBrainTreeOld.cs" />
+    <Compile Include="Providers\_deprecated\gwCyberCash.cs" />
+    <Compile Include="Providers\_deprecated\gwMIT.cs" />
+    <Compile Include="Providers\gwMyGate.cs" />
+    <Compile Include="Providers\_deprecated\gwNexCommerce.cs" />
+    <Compile Include="Providers\_deprecated\gwPayDirect.cs" />
+    <Compile Include="Providers\gwPayGate.cs" />
+    <Compile Include="Providers\gwPayU.cs" />
+    <Compile Include="Providers\_deprecated\gwPRIGate.cs" />
+    <Compile Include="Providers\_deprecated\gwUSight.cs" />
+    <Compile Include="Providers\_deprecated\gwYKC.cs" />
+    <Compile Include="Utils\Gateways.cs" />
+    <Compile Include="Utils\GatewayUtils.cs" />
+    <Compile Include="Utils\nSoftwareUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProvidersBatch\_deprecated\" />
+    <Folder Include="ProvidersBatch\_in_progress\" />
+    <Folder Include="ProvidersBatch\_notes\" />
+    <Folder Include="ProvidersHPP\_in_progress\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Classes\Extras\DefaultBranchCodes.xml" />
+    <Content Include="lib\BouncyCastle.Crypto.dll" />
+    <Content Include="lib\Moserware.SecretSplitter.dll" />
+    <Content Include="lib\nsoftware.InPayWeb.dll" />
+    <Content Include="lib\nsoftware.InPayWeb.xml" />
+    <Content Include="lib\TCG.Crypto.dll" />
+    <Content Include="lib\TCG.Utility.dll" />
+    <Content Include="ProvidersHPP\_notes\MonsterPay.txt" />
+    <Content Include="ProvidersHPP\_notes\PayFast.txt" />
+    <Content Include="Providers\_notes\3DSI.txt" />
+    <Content Include="Providers\_notes\ACHFederal.txt" />
+    <Content Include="Providers\_notes\ACHPayments.txt" />
+    <Content Include="Providers\_notes\Adyen.txt" />
+    <Content Include="Providers\_notes\AuthorizeNet.txt" />
+    <Content Include="Providers\_notes\BankOfAmerica.txt" />
+    <Content Include="Providers\_notes\Barclay.txt" />
+    <Content Include="Providers\_notes\Beanstream.txt" />
+    <Content Include="Providers\_notes\Bluefin.txt" />
+    <Content Include="Providers\_notes\BluePay.txt" />
+    <Content Include="Providers\_notes\BrainTree.txt" />
+    <Content Include="Providers\_notes\Chase.txt" />
+    <Content Include="Providers\_notes\Cyberbit.txt" />
+    <Content Include="Providers\_notes\CyberCash_STATUS_DEAD.txt" />
+    <Content Include="Providers\_notes\CyberSource.txt" />
+    <Content Include="Providers\_notes\DataCash.txt" />
+    <Content Include="Providers\_notes\ECX.txt" />
+    <Content Include="Providers\_notes\Eway.txt" />
+    <Content Include="Providers\_notes\FirstAtlantic.txt" />
+    <Content Include="Providers\_notes\FirstDataE4.txt" />
+    <Content Include="Providers\_notes\FirstData.txt" />
+    <Content Include="Providers\_notes\GlobalIris.txt" />
+    <Content Include="Providers\_notes\GoEMerchant.txt" />
+    <Content Include="Providers\_notes\GoToBilling.txt" />
+    <Content Include="Providers\_notes\Heartland.txt" />
+    <Content Include="Providers\_notes\Innovative.txt" />
+    <Content Include="Providers\_notes\Intellipay.txt" />
+    <Content Include="Providers\_notes\ITransact.txt" />
+    <Content Include="Providers\_notes\JetPay.txt" />
+    <Content Include="Providers\_notes\Litle.txt" />
+    <Content Include="Providers\_notes\MerchantAnywhere.txt" />
+    <Content Include="Providers\_notes\MerchantESolutions.txt" />
+    <Content Include="Providers\_notes\MerchantPartners.txt" />
+    <Content Include="Providers\_notes\MIT_STATUS_FOREIGN.txt" />
+    <Content Include="Providers\_notes\MonerisUSA.txt" />
+    <Content Include="Providers\_notes\Moneris.txt" />
+    <Content Include="Providers\_notes\MPCS.txt" />
+    <Content Include="Providers\_notes\MyGate.txt" />
+    <Content Include="Providers\_notes\Netbanx.txt" />
+    <Content Include="Providers\_notes\NetBilling.txt" />
+    <Content Include="Providers\_notes\NetworkMerchants.txt" />
+    <Content Include="Providers\_notes\NexCommerce_STATUS_RESELLER.txt" />
+    <Content Include="Providers\_notes\Ogone.txt" />
+    <Content Include="Providers\_notes\PayDirect_STATUS_DEAD.txt" />
+    <Content Include="Providers\_notes\PayGate.txt" />
+    <Content Include="Providers\_notes\PayJunction.txt" />
+    <Content Include="Providers\_notes\PayLeap.txt" />
+    <Content Include="Providers\_notes\PaymentExpress.txt" />
+    <Content Include="Providers\_notes\PaymentsGateway.txt" />
+    <Content Include="Providers\_notes\PayPoint.txt" />
+    <Content Include="Providers\_notes\Payscape.txt" />
+    <Content Include="Providers\_notes\PayTrace.txt" />
+    <Content Include="Providers\_notes\PayU.txt" />
+    <Content Include="Providers\_notes\PlanetPayment.txt" />
+    <Content Include="Providers\_notes\PlugNPay.txt" />
+    <Content Include="Providers\_notes\PRIGate_STATUS_DEAD.txt" />
+    <Content Include="Providers\_notes\QBMS.txt" />
+    <Content Include="Providers\_notes\SagePay %28Netcash%29.txt" />
+    <Content Include="Providers\_notes\SagePay.txt" />
+    <Content Include="Providers\_notes\Setcom.txt" />
+    <Content Include="Providers\_notes\USight_STATUS_DEAD.txt" />
+    <Content Include="Providers\_notes\VCS.txt" />
+    <Content Include="Providers\_notes\YKC_STATUS_FOREIGN.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="lib\nsoftware.InPayWeb.vsix" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PaymentGatewayLibrary\TCG.PaymentGatewayLibrary.csproj">
+      <Project>{621e8f40-9577-4937-a314-81fcb2438f9e}</Project>
+      <Name>TCG.PaymentGatewayLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

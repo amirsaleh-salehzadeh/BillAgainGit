@@ -1,0 +1,25 @@
+﻿Applied for developer account on 29-03-2014 using developer@thecodegroup.co.za
+
+http://developer.beanstream.com/
+
+Company Login:	thecodegroup
+Username:		thecodegrouptest
+email:			developer@thecodegroup.co.za
+password:		Devmo.2814
+
+MerchantID:		300220004
+Currency:		GBP
+API Passcode:	a535d7c4f25044D0A886d49a41A4FC99
+
+
+
+Special Notes:
+Supports 2 types of Auth: (http://developer.beanstream.com/documentation/authentication/)
+ 1. No Auth
+ 2. Api Passcode	(we implement this one)
+ 3. Hash Value
+
+ Generate Api Passcode :
+ - Go to: administration > account settings > order settings
+ - Under Payment Gateway > Security/Authentication, click Generate New Passcode. We automatically generate a code for you.
+ - Click Update. Note: if you do not click Update, the system may not save your passcode.

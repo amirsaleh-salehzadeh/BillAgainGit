@@ -1,0 +1,23 @@
+﻿Applied for developer account on 29-03-2014 using developer@thecodegroup.co.za
+
+https://developer.authorize.net/
+
+Account Type:		Card Not Present
+email:				developer@thecodegroup.co.za
+Login:				thecodegrouptest1
+password:			DevMo.2814
+
+Payment Gateway ID:	451817
+API Login ID:		663b8cQRf
+Transaction Key:	9C6C59t2cke75DVV
+Secret Question:	Simon
+
+
+
+Test credit card numbers:
+- American Express Test Card: 370000000000002
+- Discover Test Card: 6011000000000012
+- Visa Test Card: 4007000000027
+- Second Visa Test Card: 4012888818888
+- JCB: 3088000000000017
+- Diners Club/ Carte Blanche: 38000000000006

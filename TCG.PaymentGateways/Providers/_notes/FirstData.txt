@@ -1,0 +1,11 @@
+﻿contacted via website contact us for developer account on 02-04-2014 using developer@thecodegroup.co.za
+
+You can sign up for a demo account here: https://provisioning.demo.globalgatewaye4.firstdata.com/signup
+All documentation on our system can be found here: https://firstdata.zendesk.com/home
+
+The following information is needed to complete the initial setup for your Global Gateway e4 solution
+Test Merchant Name: 	The Code Group
+Test User Name: 	the960
+Test User Password: 	devmo_2814
+
+https://demo.globalgatewaye4.firstdata.com/

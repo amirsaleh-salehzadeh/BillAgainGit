@@ -1,0 +1,42 @@
+﻿Not using nsoftware
+
+https://developer.mygateglobal.com
+forum handle:	thecodegroup
+email:			developer@thecodegroup.co.za
+password:		devmo.2814
+
+
+Application Name :	Account2 - Virtual - 20144512333440 
+Application ID :	49582cdc-f75a-4931-ade1-37fc9b2fe58a 
+
+
+Welcome to the Sandbox Console
+ 
+Your account details are :
+Username :	developer@thecodegroup.co.za
+Password : 	c4aqcnba
+
+Merchant ID: 9a6646ab-5e5e-40b8-aa06-015ec6031bd0
+Application ID: bbd74b25-51a3-4bdc-8c90-d64f2c23b9ef
+ 
+To log in, go to https://developer.mygateglobal.com
+
+Debit Order XML Info:
+http://mygate.co.za/images/PDFs/debitorderxml.pdf
+
+
+GATEWAY IDs
+Data Value		Data Presentation
+01				Sandbox Test Bank
+21				First National Bank
+22				ABSA
+23				Nedbank
+24				Standard Bank
+25				Mauritius Commercial Bank
+26				Royal Bank of Scotland
+
+Action Values
+1 Authorization Request
+2 Authorization Reversal Request
+3 Capture Request
+4 Credit Request

@@ -1,0 +1,33 @@
+﻿--------------------------------------------------
+Default Sandbox Credentials
+--------------------------------------------------
+Merchant account (For testing ITN - default):
+Username: sbtm01@payfast.co.za
+Merchant ID: 10000100
+Merchant Key: 46f0cd694581a
+PDT: Disabled
+ITN: Use notify_url to test ITN
+--------------------------------------------------
+Merchant account (For testing PDT and/or ITN):
+Username: sbtm02@payfast.co.za
+Merchant ID: 10000103
+Merchant Key: 479f49451e829
+PDT: Enabled
+PDT Key: 0a1e2e10-03a7-4928-af8a-fbdfdfe31d43
+ITN: Use notify_url to test ITN
+--------------------------------------------------
+Sandbox Buyer Account:
+Username: sbtu01@payfast.co.za
+Password: clientpass
+--------------------------------------------------
+Live	https://www.payfast.co.za/eng/process		Port 443
+Sandbox	https://sandbox.payfast.co.za/eng/process	Port 443
+_____________________________________________________
+
+Actual Sandbox Credentials:			
+---------------------------				
+Merchant ID		10001123							
+Merchant Key	unnokc7xb61cx						
+Email:			developer@thecodegroup.co.za		
+Password:		devmo.2814							
+_____________________________________________________

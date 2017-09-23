@@ -1,0 +1,11 @@
+﻿emailed for developer account on 29-03-2014 using developer@thecodegroup.co.za
+
+https://mdepayments.epdq.co.uk/ncol/test/backoffice/
+
+Your chosen PSPID is: cod045
+password:				devmo.2814
+
+PSPID: cod045
+UID: test123
+URL: http://www.epdq.co.uk
+E-mail: developer@thecodegroup.co.za

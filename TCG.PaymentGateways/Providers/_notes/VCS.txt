@@ -1,0 +1,6 @@
+﻿
+A test terminal has been created for you as requested, TID 9659. Your login details for the terminal are as follows:
+
+Login Name: Mohamed
+
+Password: CO18evI3

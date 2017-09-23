@@ -1,0 +1,31 @@
+﻿To test please use the below details or contact support@setcom.com for a test account:
+ CO_ID: testaccount
+ OUTLET: testaccount
+ Username: testaccount
+ Password: testaccount
+
+Credit Card Test Details
+
+-----------------------------------------------------------
+Name			Number					ExpDate		CVV		
+-----------------------------------------------------------
+						  Visa
+Test Buyer VS1	4000 0000 0000 0010		11-2020		111
+Test Buyer VS2	4444 3333 2222 1111		11-2020		111
+Test Buyer VS3	4000 0000 0000 0002		11-2020		111
+-----------------------------------------------------------
+					   MasterCard
+Test Buyer MC1	5454 5454 5454 5454		12-2020		222
+Test Buyer MC2	5566 5566 5566 5566		12-2020		222
+Test Buyer MC3	5555 5555 5555 4444		12-2020		222
+-----------------------------------------------------------
+						Diners
+Test Buyer DC1	3600 0000 0000 08		11-2020		Na
+Test Buyer DC2	3020 4169 3226 43		11-2020		Na
+Test Buyer DC3	3056 9309 0259 04		11-2020		Na
+-----------------------------------------------------------
+					American Express
+Test Buyer AX1	3434 3434 3434 343		12-2020		1111
+Test Buyer AX2	3411 1111 1111 111		12-2020		1111
+Test Buyer AX3	3400 0000 0000 009		12-2020		1111
+-----------------------------------------------------------

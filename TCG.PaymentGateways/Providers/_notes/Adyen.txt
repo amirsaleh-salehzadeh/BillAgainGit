@@ -1,0 +1,22 @@
+﻿filled out contact form on website for developer account on 29-03-2014 using developer@thecodegroup.co.za
+
+URL: https://ca-test.adyen.com
+Account: TheCodeGroup
+User: admin
+Password: devmo.2814
+
+Request Details:
+Username: ws@Company.TheCodeGroup
+Password: @6DeU(C>zKaFNH=4aeS!TkVz%
+
+TEST URLs
+Adyen Customer Area (CA) https://ca-test.adyen.com/
+Hosted Payment Pages (Multiple): https://test.adyen.com/hpp/select.shtml
+Hosted Payment Pages (Single): https://test.adyen.com/hpp/pay.shtml
+Directory Lookup: https://test.adyen.com/hpp/directory.shtml
+*Modification SOAP Service https://pal-test.adyen.com/pal/servlet/soap/Payment
+Modification SOAP Service WSDL https://pal-test.adyen.com/pal/Payment.wsdl
+Notification SOAP Service WSDL https://ca-test.adyen.com/ca/services/Notification?wsdl
+
+**Will come back to this provider, need to either use client side encryption or get PCI certified**
+**Refer to email**

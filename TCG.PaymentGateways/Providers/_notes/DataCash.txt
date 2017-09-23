@@ -1,0 +1,48 @@
+﻿contacted via website contact us for developer account on 29-03-2014 using developer@thecodegroup.co.za
+
+login details: pending..................
+
+Primary Payment Gateway
+Under normal operating situations the Primary Payment Gateway should be used:
+
+XML Transactions	https://mars.transaction.datacash.com/Transaction
+Reporting URL	https://reporting.datacash.com
+
+
+Secondary Payment Gateway
+If you are unable to connect to the Primary host, DataCash provide a Secondary Payment Gateway:
+
+XML Transactions	available in Reporting
+Reporting URL	as Primary
+Reporting Login Details	as Primary
+
+
+Test System
+If you are testing - for example if you are trialling the system for the first time, or are an existing Datacash client testing a new feature - please use the following details:
+
+XML Transactions	https://testserver.datacash.com/Transaction
+Reporting	https://testserver.datacash.com/reporting2
+
+This account should be used to send transactions to testserver.datacash.com.
+
+The account is initially set up to trade in GBP only
+
+Your account details are as follows:
+
+  Client:   99007536
+  Password: KHr3C6rHN
+
+  Developers Guide:  https://testserver.datacash.com/software/download.cgi
+
+  Reporting:
+  https://testserver.datacash.com/reporting2/activate?t=gu6w9s0c
+
+  Group:    99007536
+  Username: 99007536
+  Activation Token: fdatjm54
+
+  Access to the reporting site for test transactions is via
+https://testserver.datacash.com/reporting2/
+
+Please note that test accounts are subject to a 12 month lifespan after
+which the account may be deleted.

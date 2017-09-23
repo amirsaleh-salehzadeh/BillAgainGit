@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BankList>
+  <Bank>
+    <BankName>ABSA</BankName>
+    <DefaultCode>632005</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>African Bank</BankName>
+    <DefaultCode>430000</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>Albaraka Bank</BankName>
+    <DefaultCode>800000</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>Capitec Bank</BankName>
+    <DefaultCode>470010</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>First National Bank</BankName>
+    <DefaultCode>250655</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>HSBC</BankName>
+    <DefaultCode>587000</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>Investec Bank</BankName>
+    <DefaultCode>580105</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>MTN Banking</BankName>
+    <DefaultCode>490991</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>Nedbank</BankName>
+    <DefaultCode>198765</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>Postbank</BankName>
+    <DefaultCode>460005</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>Sasfin</BankName>
+    <DefaultCode>683000</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>Standard Bank</BankName>
+    <DefaultCode>051001</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>Standard Chartered Bank</BankName>
+    <DefaultCode>730045</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>State Bank of India</BankName>
+    <DefaultCode>801000</DefaultCode>
+  </Bank>
+  <Bank>
+    <BankName>VBS Mutual</BankName>
+    <DefaultCode>588000</DefaultCode>
+  </Bank>
+</BankList>

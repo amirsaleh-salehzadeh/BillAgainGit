@@ -1,0 +1,29 @@
+﻿ACH Payments - Forte test account
+
+Please click on the link to get started: https://sandbox.paymentsgateway.net/vt3/login.aspx
+
+http://www.paymentsgateway.com/developerDocumentation/Introduction.aspx
+You will most likely want to integrate using the AGI integration method - http://www.paymentsgateway.com/Libraries/API_PDF_Docs/agi_integration.sflb.ashx
+
+Merchant ID - 164714
+VT User Password - 5Y3TWu6n
+Transaction Password - 13OUAT1d2qb
+
+Account will be deleted in 60 days.
+
+You are now setup with an Forte test account. Your merchant ID and User ID are below, your password has been emailed to you.
+Merchant ID - 164818
+VT User ID - xn5A4C
+
+TestUrl
+https://www.paymentsgateway.net/cgi-bin/posttest.pl
+
+The port numbers used for testing the DSI delivery method are listed below. 
+The test URL for the POST method is also listed below. 
+If you are using the COM object method, 
+you need only have its second argument set to perform a “test.” 
+
+DSI port 6050 (newline delimited, SSL)
+DSI port 6051 (ampersand delimited, SSL) 
+POST https://www.paymentsgateway.net/cgi-bin/posttest.pl
+COM Set second argument to “test”

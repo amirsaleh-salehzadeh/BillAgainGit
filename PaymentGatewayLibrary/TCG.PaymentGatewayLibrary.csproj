@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{621E8F40-9577-4937-A314-81FCB2438F9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCG.PaymentGatewayLibrary</RootNamespace>
+    <AssemblyName>TCG.PaymentGatewayLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PayPal, Version=1.8.0.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.8.0\lib\net45\PayPal.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="lib\mygate_enterprise.cs" />
+    <Compile Include="lib\mygate_dd_vault.cs" />
+    <Compile Include="lib\mygate_accountverify.cs" />
+    <Compile Include="lib\mygate_collections_vault.cs" />
+    <Compile Include="lib\mygate_dd.cs" />
+    <Compile Include="lib\mygate_enterprise_vault.cs" />
+    <Compile Include="lib\paygate_paybatch.cs" />
+    <Compile Include="lib\paypal_direct.cs" />
+    <Compile Include="lib\SageNetcash_NIWS_HelpSvs.cs" />
+    <Compile Include="lib\SageNetcash_NIWS_NIFSvs.cs" />
+    <Compile Include="lib\SageNetcash_NIWS_ValidationSvs.cs" />
+    <Compile Include="lib\SagePayNetcashPartner.cs" />
+    <Compile Include="lib\sage_netcash_netftp.cs" />
+    <Compile Include="lib\payu_enterprise.cs" />
+    <Compile Include="lib\sage_netcash_vault.cs" />
+    <Compile Include="lib\vcs_tokenisation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\PayGateBatchSvs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PayUEnterpriseService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\PayGateBatchSvs\PayBatch.wsdl" />
+    <None Include="Service References\PayGateBatchSvs\TCG.PaymentGatewayLibrary.PayGateBatchSvs.BatchReturn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayGateBatchSvs\TCG.PaymentGatewayLibrary.PayGateBatchSvs.QueryReturn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\EnterpriseAPISoapService.wsdl" />
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.DeleteTransactionResponseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.doDeleteTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.doTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.DoTransactionResponseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.getLookupTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.getTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.GetTransactionResponseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.hiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.LookupTransactionResponseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.managePaymentMethodResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.ManagePaymentMethodResponseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.setTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayUEnterpriseService\TCG.PaymentGatewayLibrary.PayUEnterpriseService.SetTransactionResponseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PayGateBatchSvs\" />
+    <WCFMetadataStorage Include="Service References\PayUEnterpriseService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayUEnterpriseService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayUEnterpriseService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayUEnterpriseService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayGateBatchSvs\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayGateBatchSvs\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayGateBatchSvs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

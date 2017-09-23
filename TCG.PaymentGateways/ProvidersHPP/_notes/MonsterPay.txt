@@ -1,0 +1,87 @@
+﻿Use this test buyer account to make test purchases:
+
+Username: testbuyer@MonsterPay.com   
+Password: testbuyer 
+Please note: The requested CVV for all test credit cards is 114
+
+Use one of the following test seller accounts to test your implementation:
+
+Username: testseller1@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller1'
+
+Username: testseller2@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller2' 
+
+Username: testseller3@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller3' 
+
+Username: testseller4@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller4' 
+
+Username: testseller5@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller5'
+
+Username: testseller6@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller6'
+
+Username: testseller7@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller7'
+
+Username: testseller8@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller8'
+
+Username: testseller9@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller9'
+
+Username: testseller10@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller10'
+
+Username: testseller11@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller11'
+
+Username: testseller12@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller12'
+
+Username: testseller13@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller13'
+
+Username: testseller14@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller14'
+
+Username: testseller15@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller15'
+
+Username: testseller16@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller16'
+
+Username: testseller17@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller17'
+
+Username: testseller18@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller18'
+
+Username: testseller19@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller19'
+
+Username: testseller20@MonsterPay.com 
+Password: testseller 
+To use this test account you need to change the MerchantIdentifier value of your generated button to: 'testseller20'

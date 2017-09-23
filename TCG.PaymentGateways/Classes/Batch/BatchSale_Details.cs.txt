@@ -1,0 +1,149 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TCG.PaymentGateways.Classes.Batch
+{
+     [Serializable()]
+    public class BatchSale_Details
+    {
+
+         public DateTimeOffset ActionDate { get; set; } //the date when the debit order should occur
+         public decimal Amount { get; set; } //the amount that needs to be debited
+         public decimal AmountInCents
+         {
+             get
+             {
+                 return Amount * 100;
+             }
+         }
+         public string Reference { get; set; } //our reference
+
+         public string BranchCode { get; set; }
+         /// <summary>
+         /// 1. Current (Cheque) 
+         /// 2. Savings 
+         /// 3. Transmission 
+         /// 4. Bond 
+         /// 5. Subscription Share 
+         /// 6. Credit Card 
+         /// </summary>
+         public string AccountType { get; set; }
+         public string AccountNumber { get; set; }
+         
+         public string Name { get; set; }
+         public string LastName { get; set; }
+         public string IDNumber { get; set; }
+         /// <summary>
+         /// a chosen client PIN, = last 4 digits of credit / debit card 
+         /// </summary>
+         public string ClientPIN { get; set; }
+         /// <summary>
+         /// ClientUCI = internal token
+         /// </summary>
+         public string InternalToken { get; set; } //
+         /// <summary>
+         /// ClientUID = external token
+         /// </summary>
+         public string ExternalToken { get; set; } //
+         public string CardNumber { get; set; } //for gateways that take it raw
+         public int BudgetPeriod { get; set; }
+         public int ExpMonth { get; set; }
+         public int ExpYear { get; set; }
+         public string ExpDate
+         {
+             get
+             {
+                 if (ExpMonth < 10)
+                     return "0" + ExpMonth.ToString() + ExpYear.ToString();
+                 else
+                     return ExpMonth.ToString() + ExpYear.ToString();
+             }
+         }
+
+        public string CurrencyCode { get; set; }
+        public string CurrencyCodeNumeric { get; set; }
+        public string TransactionIndex { get; set; }
+         
+
+        // Tracking Field
+        //public long accountID { get; set; }
+        //public long customerID { get; set; }
+        //public long transactionID { get; set; }
+        //public string InvoiceNumber { get; set; }
+        //public string TransactionIndex { get; set; }
+
+        //// Debit Order Transaction Info
+        //public string AccountHolder { get; set; }
+        //public string AccountNo { get; set; }
+        //public string AccountType { get; set; }
+        //public string Bank { get; set; }
+        //public string BranchCode { get; set; }
+
+        //// Credit Card Debit Order Transaction Info
+        //public string CardNumber { get; set; }
+        //public string CardHolderName { get; set; }
+        //public int CardExpMonth { get; set; }
+        //public int CardExpYear { get; set; }
+        //public string internalToken { get; set; }
+        //public string externalToken { get; set; }
+
+        //public DirectDebitMethodEnum Method { get; set; }
+        //public decimal Amount { get; set; }
+
+        //public string CurrencyCode { get; set; }
+        //public string CurrencyCodeNumeric { get; set; }
+
+        // // Customer Info
+        //public string IPAddress { get; set; }
+        //public string CustomerIDNumber { get; set; }
+        //public string CustomerFirstName { get; set; }
+        //public string CustomerLastName { get; set; }
+        //public string CustomerAddress { get; set; }
+        //public string CustomerCity { get; set; }
+        //public string CustomerCountry { get; set; }
+        //public string CustomerCountryCode { get; set; }
+        //public string CustomerEmail { get; set; }
+        //public string CustomerPhone { get; set; }
+        //public string CustomerState { get; set; }
+        //public string CustomerZip { get; set; }
+    }
+
+     [Serializable()]
+     public class BatchRefund_Details
+     {
+         // Tracking Field
+         public long accountID { get; set; }
+         public long customerID { get; set; }
+         public long transactionID { get; set; }
+         public string InvoiceNumber { get; set; }
+         public string TransactionIndex { get; set; }
+
+         // Debit Order Transaction Info
+         public string AccountHolder { get; set; }
+         public string AccountNo { get; set; }
+         public string AccountType { get; set; }
+         public string Bank { get; set; }
+         public string BranchCode { get; set; }
+
+         // Credit Card Debit Order Transaction Info
+         public string CardNumber { get; set; }
+         public string CardHolderName { get; set; }
+         public int CardExpMonth { get; set; }
+         public int CardExpYear { get; set; }
+
+         public BatchMethodEnum Method { get; set; }
+         public decimal Amount { get; set; }
+
+         public string CurrencyCode { get; set; }
+         public string CurrencyCodeNumeric { get; set; }
+
+     }
+
+    public class BatchRelease_Details
+    {
+        public string TransactionIndex { get; set; }
+    }
+}

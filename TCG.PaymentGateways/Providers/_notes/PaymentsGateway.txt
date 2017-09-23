@@ -1,0 +1,11 @@
+﻿contacted via website for developer account on 02-04-2014 using developer@thecodegroup.co.za
+
+First name: Mohamed
+Last Name: Cassim
+Email: developer@thecodegroup.co.za
+User Name: thecodegrouptest
+pass: Devmo.2814
+
+https://sandbox.paymentsgateway.net/vt3/login.aspx
+
+waiting on test account
